@@ -1,0 +1,65 @@
+sources:
+  - dataset_id: census_2024_blocks
+    title: "Censo de Poblacion y Vivienda 2024 - base manzana-entidad y cartografia"
+    institution: "Instituto Nacional de Estadisticas (INE)"
+    source_url: "https://censo2024.ine.gob.cl/ine-publica-bases-de-datos-a-nivel-de-manzana-y-cartografia-del-censo-de-poblacion-y-vivienda-2024/"
+    publication_year: 2025
+    reference_year: 2024
+    geographic_resolution: "manzana-entidad"
+    expected_format: "paquete oficial INE (tabla + cartografia)"
+    local_path: "data/raw/census_2024/"
+    acquisition_method: "manual"
+    license_note: "Revisar condiciones oficiales INE y secreto estadistico."
+    notes: "La pagina oficial publica 189 variables y cartografia; no fijar nombres de columnas sin revisar el diccionario oficial."
+
+  - dataset_id: ine_population_projections_2024
+    title: "Estimaciones y Proyecciones de Poblacion, base 2024"
+    institution: "Instituto Nacional de Estadisticas (INE)"
+    source_url: "https://www.ine.gob.cl/estadisticas-por-tema/demografia-y-poblacion/estimaciones-y-proyecciones-de-poblacion"
+    publication_year: 2026
+    reference_year: 2026
+    geographic_resolution: "comuna cuando la tabla oficial lo permita"
+    expected_format: "tabla oficial INE"
+    local_path: "data/raw/projections/"
+    acquisition_method: "manual"
+    license_note: "Fuente oficial INE."
+    notes: "No inventar una proyeccion comunal; registrar el valor solo despues de verificar la tabla oficial."
+
+  - dataset_id: subdere_2024_waste_characterization
+    title: "Estudio de caracterizacion de residuos solidos domiciliarios y asimilables generados a nivel municipal en Chile"
+    institution: "Subsecretaria de Desarrollo Regional y Administrativo (SUBDERE)"
+    source_url: "https://proactiva.subdere.gov.cl/handle/123456789/649"
+    publication_year: 2024
+    reference_year: 2024
+    geographic_resolution: "municipal / campañas estacionales"
+    expected_format: "PDF + anexos"
+    local_path: "data/raw/waste/subdere_2024/"
+    acquisition_method: "manual"
+    license_note: "Fuente publica SUBDERE."
+    notes: "Para Viña del Mar: 0.78 kg/hab/dia y 46.81% organico en invierno; 1.18 y 49.42% en verano."
+
+  - dataset_id: municipal_collected_waste
+    title: "Residuos municipales recolectados"
+    institution: "Municipalidad de Viña del Mar / sistema oficial correspondiente"
+    source_url: ""
+    publication_year: null
+    reference_year: null
+    geographic_resolution: "comuna"
+    expected_format: "tabla o documento oficial"
+    local_path: "data/raw/municipal/"
+    acquisition_method: "manual"
+    license_note: "Pendiente de fuente primaria especifica."
+    notes: "Usar solo para validacion comunal; no distribuir automaticamente por habitante."
+
+  - dataset_id: building_administrative_data
+    title: "Datos administrativos de edificio o condominio"
+    institution: "Administracion del edificio / DOM / transparencia"
+    source_url: ""
+    publication_year: null
+    reference_year: null
+    geographic_resolution: "edificio"
+    expected_format: "CSV segun data/external/buildings_template.csv"
+    local_path: "data/external/buildings.csv"
+    acquisition_method: "manual"
+    license_note: "No incluir datos personales; solo agregados de ocupacion."
+    notes: "Registrar metodo de ocupacion: observado, administrativo o inferido."

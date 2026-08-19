@@ -1,0 +1,3 @@
+building_id,building_name,commune,address,total_units,occupied_units,average_people_per_occupied_unit,observed_residents,occupancy_data_method,latitude,longitude,notes
+SYN-001,Edificio Sintetico A,Viña del Mar,,100,90,2.4,,synthetic,-33.02,-71.55,Ejemplo sintetico; reemplazar
+SYN-002,Edificio Sintetico B,Viña del Mar,,60,55,,132,synthetic,-33.03,-71.54,Ejemplo con residentes observados sinteticos

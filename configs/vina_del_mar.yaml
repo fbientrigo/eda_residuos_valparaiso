@@ -1,0 +1,58 @@
+study:
+  name: "Estimacion territorial de residuos organicos residenciales - Vina del Mar"
+  region_code: "05"
+  province_code: "051"
+  commune_code: "05109"
+  commune_name: "Viña del Mar"
+  census_year: 2024
+  projection_year: 2026
+  commune_projection_2026: null   # completar solo con valor oficial verificado
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  outputs: outputs
+  sources: configs/sources.yaml
+
+census_columns:
+  block_id: block_id
+  region_code: region_code
+  province_code: province_code
+  commune_code: commune_code
+  population: population_2024
+  households: households_2024
+  occupied_dwellings: occupied_dwellings_2024
+  apartments: apartments_2024
+
+waste:
+  winter:
+    total_waste_kg_per_person_day: 0.78
+    organic_fraction: 0.4681
+    factor_source_id: subdere_2024_waste_characterization
+  summer:
+    total_waste_kg_per_person_day: 1.18
+    organic_fraction: 0.4942
+    factor_source_id: subdere_2024_waste_characterization
+
+capture:
+  separation_efficiency: 0.85
+  accepted_fraction: 0.90
+  safety_margin: 0.20
+  assumptions_status: "scenario_not_observed"
+  scenarios:
+    conservative: 0.30
+    expected: 0.60
+    high: 0.80
+
+building:
+  average_people_per_occupied_unit: null
+  occupancy_default_allowed: false
+
+spatial:
+  output_crs: "EPSG:32719"
+  map_crs: "EPSG:4326"
+
+synthetic_demo:
+  seed: 2026
+  projected_population_2026: 2800
